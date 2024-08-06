@@ -12,15 +12,15 @@
 </body>
 <script>
     const url = [
-        "https://docs.google.com/document/d/1WhDyEPSrR6Ou8oR7M14M-vfYM61IbrDt/edit?usp=sharing&ouid=116553487396498372709&rtpof=true&sd=true"
+        {"name": "확인서 양식", "value": "https://docs.google.com/document/d/1WhDyEPSrR6Ou8oR7M14M-vfYM61IbrDt/edit?usp=sharing&ouid=116553487396498372709&rtpof=true&sd=true"}
     ]
     const box = document.getElementById("urlBox")
     
-    url.forEach((txt) => {
+    url.forEach((obj) => {
         let a = document.createElement('a');
         
-        a.setAttribute("href", txt);
-        a.innerText = txt;
+        a.setAttribute("href", obj?.value);
+        a.innerText = obj?.name;
         box.appendChild(a);
     });
 </script>
