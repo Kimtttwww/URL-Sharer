@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Sharer</title>
+</head>
+<body>
+    <h2>URL Sharer</h2>
+    <section id="urlBox" style="border: 1px solid #000; display: flex; flex-direction: column;">
+    </section>
+</body>
+<script>
+    const url = [
+        "https://docs.google.com/document/d/1WhDyEPSrR6Ou8oR7M14M-vfYM61IbrDt/edit?usp=sharing&ouid=116553487396498372709&rtpof=true&sd=true"
+    ]
+    const box = document.getElementById("urlBox")
+    
+    url.forEach((txt) => {
+        let a = document.createElement('a');
+        
+        a.setAttribute("href", txt);
+        a.innerText = txt;
+        box.appendChild(a);
+    });
+</script>
+</html>
